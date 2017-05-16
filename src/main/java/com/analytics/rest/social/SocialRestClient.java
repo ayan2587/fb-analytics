@@ -46,10 +46,7 @@ public class SocialRestClient {
 	    	HttpEntity entity = new HttpEntity(headers);
 	    	
 			groupFeedFullRequestUrl = fbGroupFeedRequest+"fields="+fields+"&access_token="+fbAccessToken+"&since="+sinceTs+"&limit="+limit+"&until="+untilTs;
-			Map<Long, List<Datum>> personToPostMap = new HashMap<Long, List<Datum>>();
-	    	Map<Integer, List<Long>> noOfPostsToPersons = new HashMap<Integer, List<Long>>();
-	    	Set<Integer> uniqueNoOfPosts = new HashSet<Integer>();
-	    	
+				    	
 	    	String nextPagingUrl = groupFeedFullRequestUrl;
 	    	List<Datum> feed = new ArrayList<Datum>();
 	    	
